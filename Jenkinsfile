@@ -4,12 +4,7 @@ pipeline {
         //be sure to replace "bhavukm" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "balogzz/train-schedule"
     }
-    stages {
-        stage('Clonerepo') {
-            steps {
-                git 'https://github.com/balogz/cicd-pipeline-train-schedule-autodeploy.git'
-            }
-        }
+    
     stages {
         stage('Build') {
             steps {
