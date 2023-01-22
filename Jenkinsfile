@@ -1,11 +1,5 @@
 pipeline {
     agent any
-    stages {
-        stage('Clonerepo') {
-            steps {
-                git 'https://github.com/balogz/cicd-pipeline-train-schedule-autodeploy.git'
-            }
-        }
     environment {
         //be sure to replace "bhavukm" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "balogzz/train-schedule"
