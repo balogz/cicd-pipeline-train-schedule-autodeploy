@@ -5,6 +5,12 @@ pipeline {
         DOCKER_IMAGE_NAME = "balogzz/train-schedule"
     }
     stages {
+        stage('Clonerepo') {
+            steps {
+                git 'https://github.com/bhasker-manikyala/DevOpsClassCodes.git'
+            }
+        }
+    stages {
         stage('Build') {
             steps {
                 echo 'Running build automation'
